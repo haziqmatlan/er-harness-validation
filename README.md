@@ -12,6 +12,11 @@ The ER Harness Validation framework provides automated validation of entity reso
 - **Token-Based Name Matching**: Smart handling of compound names (e.g., "Kirby-Jones" vs “Jones”)
 - **Mismatch Pattern Analysis**: Identification and categorization of data discrepancies
 
+## 💡 Objectives
+- Evaluate the accuracy of ER outputs by comparing them with a truth dataset.
+- Identify matches, mismatches, and extra/missing records.
+- Generate a comprehensive validation report with mismatch diagnostics.
+
 ## 📁 Project Structure
 
 ```
