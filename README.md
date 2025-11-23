@@ -9,7 +9,7 @@ The ER Harness Validation framework provides automated validation of entity reso
 - **MD5 Hash Comparison**: Fast 1:1 record matching using cryptographic hashes
 - **Error Matrix Classification**: TP (True Positive), TN (True Negative), FP (False Positive), FN (False Negative)
 - **Column-Level Analysis**: Detailed comparison of each individual columns
-- **Token-Based Name Matching**: Smart handling of compound names (e.g., "Kirby-Jones")
+- **Token-Based Name Matching**: Smart handling of compound names (e.g., "Kirby-Jones" vs “Jones”)
 - **Mismatch Pattern Analysis**: Identification and categorization of data discrepancies
 
 ## 📁 Project Structure
@@ -46,30 +46,6 @@ er-harness-validation/
 ```
 
 ## 🚀 Getting Started
-
-### Prerequisites
-
-- Python 3.8 or higher
-- Apache Spark 3.0+
-- Databricks environment (optional)
-
-### Installation
-
-1. **Clone the repository**:
-```bash
-git clone https://github.com/emeron1234/er-harness-validation.git
-cd er-harness-validation
-```
-
-2. **Install dependencies**:
-```bash
-pip install -r requirements.txt
-```
-
-3. **Install the package** (optional):
-```bash
-pip install -e .
-```
 
 ### Configuration
 
@@ -115,22 +91,6 @@ validator.display_results()
 
 # Save results
 validator.save_results("/path/to/output", format="parquet")
-```
-
-### Command Line
-
-```bash
-python main.py
-```
-
-### In Databricks Notebook
-
-```python
-%run ./main.py
-
-validator = ERHarnessValidator()
-final_df = validator.run_validation()
-validator.display_results()
 ```
 
 ## 📊 Output
@@ -182,21 +142,5 @@ The validation produces a comprehensive dataset with the following columns:
 5. Analyze Patterns → Categorize and quantify mismatches
 6. Generate Report → Create comprehensive validation output
 ```
-
-## 📝 Development
-
-### Adding New Validation Rules
-
-1. Update `config/config.py` with new thresholds
-2. Modify matching logic in `src/core/record_matcher.py`
-3. Update validation analysis in `src/core/validation_analyzer.py`
-
-## 👥 Authors
-
-- Abdul Haziq
-
-## 🔄 Version History
-
-- **v1.0.0** (2025-10-22): Initial release with full validation framework
 
 ---
